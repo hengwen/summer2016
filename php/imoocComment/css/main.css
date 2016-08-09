@@ -1,0 +1,44 @@
+
+body{
+    background: #F2F2F2;
+}
+h2{
+    font-size:30px;
+    color: #86929F;
+    text-align: center;
+}
+div{
+    margin:10px 0;
+}
+
+.comment-form{
+    background:#FCFCFC;
+    font-size:14px;
+    color:#908887;
+    padding:20px;
+    border-radius:10px;
+}
+.wrap{
+    width:470px;
+    margin:40px auto 0;
+}
+.face{
+    border:1px solid #aaaaaa;
+}
+.comment{
+    background:#FCFCFC;
+    padding:20px;
+
+}
+.comment .face{
+    float: left;
+    margin-right:20px;
+}
+.comment .pubTime{
+    float: right;
+    
+}
+.comment img{
+    width:50px;
+    height:50px;
+}

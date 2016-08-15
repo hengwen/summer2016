@@ -22,3 +22,6 @@
 
 ### 无限级分类（分类导航，分类下拉菜单）
 [https://github.com/hengwen/summer2016/tree/master/php/category](https://github.com/hengwen/summer2016/tree/master/php/category)
+
+### jpgraph学习，制作柱状图，饼图，3d饼图，折线图
+[https://github.com/hengwen/summer2016/tree/master/php/php-jpgraph](https://github.com/hengwen/summer2016/tree/master/php/php-jpgraph)

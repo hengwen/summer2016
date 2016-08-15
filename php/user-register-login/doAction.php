@@ -20,6 +20,11 @@ $table = 'user';
 //建立数据库连接
 $PdoMysql = new PdoMySQL();
 if ($act === 'reg') {  //注册操作
+    //验证表单格式
+    $msg = validate($_POST);
+    if (count($msg)) {
+        echo json_encode(array('status'=>0,'msg'=>$msg));exit;
+    }
     $token = md5($username.$password.$email);
     $regtime = time();
     $token_exptime = $regtime + 24*3600;  //激活码过期时间是注册一天后

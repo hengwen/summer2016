@@ -57,19 +57,22 @@
                         </div>
 
                         <div id="register" class="animate form">
-                            <form  action="doAction.php?act=reg" autocomplete="on" method="post"> 
+                            <form  action="" autocomplete="on" method="post" id="form-reg">
                                 <h1> Sign up </h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
                                     <input id="usernamesignup" name="username" required="required" type="text" placeholder="Mr.King" />
+                                    <span style="color:red" class="error"></span>
                                 </p>
                                 <p> 
                                     <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-                                    <input id="emailsignup" name="email" required="required" type="email" placeholder="Mr.King@mail.com"/> 
+                                    <input id="emailsignup" name="email" required="required" type="email" placeholder="Mr.King@mail.com"/>
+                                    <span style="color:red" class="error"></span>
                                 </p>
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
                                     <input id="passwordsignup" name="password" required="required" type="password" placeholder="******"/>
+                                    <span style="color:red" class="error"></span>
                                 </p>
                                 <p class="signin button"> 
 									<input type="submit" value="Sign up"/> 

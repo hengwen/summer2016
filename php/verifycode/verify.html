@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码实现</title>
+</head>
+<body>
+    <h3>制作验证码</h3>
+    <form action="checkVerify2.php" method="post">
+        <div>
+            <label>验证码:
+                <input type="text" name="verifycode" maxlength="4">
+            </label>
+            <br>
+            <!--<img src="getVerify.php" alt="验证码" id="verify" width="80" height="80">-->
+            <img src="getVerify.php" alt="验证码" id="verify">
+            <br>
+            <a href="javascript:void(0)" id="change">看不清,换一张</a>
+        </div>
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        var verify = document.getElementById('verify');
+        var change = document.getElementById('change');
+        change.onclick = function(){
+            verify.src = "getVerify.php";
+        }
+    </script>
+</body>
+</html>

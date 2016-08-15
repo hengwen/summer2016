@@ -48,7 +48,7 @@ function show_link($id,$url='show.php?cid=')
 
     return $link;
 }
-
+echo password_hash('huanghengwen',PASSWORD_DEFAULT);
 echo show_link(10);
 
 

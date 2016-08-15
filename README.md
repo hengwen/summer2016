@@ -17,7 +17,7 @@
 ### 文件系统
 [https://github.com/hengwen/summer2016/tree/master/php/simple-file-management](https://github.com/hengwen/summer2016/tree/master/php/simple-file-management)
 
-### 用户注册，通过邮件激活并登陆
+### 用户注册，通过邮件激活并登陆和退出，填写表单使用ajax提示
 [https://github.com/hengwen/summer2016/tree/master/php/user-register-login](https://github.com/hengwen/summer2016/tree/master/php/user-register-login)
 
 ### 无限级分类（分类导航，分类下拉菜单）

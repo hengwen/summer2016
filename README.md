@@ -19,3 +19,6 @@
 
 ### 用户注册，通过邮件激活并登陆
 [https://github.com/hengwen/summer2016/tree/master/php/user-register-login](https://github.com/hengwen/summer2016/tree/master/php/user-register-login)
+
+### 无限级分类（分类导航，分类下拉菜单）
+[https://github.com/hengwen/summer2016/tree/master/php/category](https://github.com/hengwen/summer2016/tree/master/php/category)

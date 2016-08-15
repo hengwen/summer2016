@@ -5,6 +5,7 @@
  * Date: 16/8/12
  * Time: 上午9:03
  */
+session_start();
 require "config.php";
 require "PdoMysql.class.php";
 require "swiftmailer-master/lib/swift_required.php";
@@ -70,12 +71,15 @@ EOF;
         redirect("注册失败!","注册页面","index.php#toregister");
     }
 } elseif ($act === 'login') {   //登录操作
-    $res = $PdoMysql->find($table,"username='{$username}' and password='{$password}'",'status');
+    $res = $PdoMysql->find($table,"username='{$username}' and password='{$password}'",'status,id,username');
     if ($res) {
         if (is_numeric($res['status']) && $res['status'] == 0) {  //未激活
             redirect("请先激活后,再登录!","登录页面","index.php#tologin");
         } else {
-            echo "<meta http-equiv='refresh' content='3;url=http://shop.com' />";
+//            echo "<meta http-equiv='refresh' content='3;url=http://shop.com' />";
+            $_SESSION['user_id'] = $res['id'];
+            $_SESSION['user_name'] = $res['username'];
+            redirect("登录成功!","首页","admin.php");
         }
     } else {
         redirect("登录失败!","登录页面","index.php#tologin");
@@ -104,6 +108,10 @@ EOF;
     } else {
         echo "fail";
     }
+} elseif ($act === "logout") {
+    $_SESSION = null;
+    session_destroy();
+    redirect("退出成功!","登录页面","index.php#tologin");
 }
 
 

@@ -31,9 +31,10 @@
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="doAction.php?act=login" autocomplete="on" method="post"> 
+                            <form  action="" autocomplete="on" method="post" id="form-login">
                                 <h1>Log in</h1> 
-                                <p> 
+                                <p>
+                                    <p id="error" style="color:red;"></p>
                                     <label for="username" class="uname" data-icon="u" > Your username </label>
                                     <input id="username" name="username" required="required" type="text" placeholder="My Username"/>
                                 </p>
@@ -84,5 +85,7 @@
                 </div>  
             </section>
         </div>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/main.js"></script>
     </body>
 </html>

@@ -74,17 +74,20 @@ EOF;
     $res = $PdoMysql->find($table,"username='{$username}' and password='{$password}'",'status,id,username');
     if ($res) {
         if (is_numeric($res['status']) && $res['status'] == 0) {  //未激活
-            redirect("请先激活后,再登录!","登录页面","index.php#tologin");
+//            redirect("请先激活后,再登录!","登录页面","index.php#tologin");
+            $respond = array('status' => 0,'msg'=> '用户未激活,请先激活');
         } else {
 //            echo "<meta http-equiv='refresh' content='3;url=http://shop.com' />";
             $_SESSION['user_id'] = $res['id'];
             $_SESSION['user_name'] = $res['username'];
-            redirect("登录成功!","首页","admin.php");
+//            redirect("登录成功!","首页","admin.php");
+            $respond = array('status' => 1,'msg' => '登录成功!');
         }
     } else {
-        redirect("登录失败!","登录页面","index.php#tologin");
+        $respond = array('status' => 0,'msg' => '用户名或密码错误');
+//        redirect("用户名或密码错误!","登录页面","index.php#tologin");
     }
-
+    echo json_encode($respond);
 } elseif ($act === 'active') {  //激活操作
     $token = addslashes($_GET['token']);
     $row = $PdoMysql->find($table,"token='{$token}'","id,status,token_exptime");

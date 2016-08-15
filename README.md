@@ -25,3 +25,6 @@
 
 ### jpgraph学习，制作柱状图，饼图，3d饼图，折线图
 [https://github.com/hengwen/summer2016/tree/master/php/php-jpgraph](https://github.com/hengwen/summer2016/tree/master/php/php-jpgraph)
+
+### GD库学习，制作图片缩略图，文字水印，图片水印
+[https://github.com/hengwen/summer2016/tree/master/php/php-jpgraph](https://github.com/hengwen/summer2016/tree/master/php/php-jpgraph)

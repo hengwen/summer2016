@@ -1,5 +1,5 @@
 # summer2016
-大三暑假PHP，MySQL，PHP框架学习
+PHP，MySQL，PHP框架学习
 
 ## PHP学习项目
 ### 项目说明
